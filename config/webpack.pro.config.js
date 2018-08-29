@@ -11,7 +11,7 @@ const Merge=require('webpack-merge');
  * */
 const BaseWebpackConfig=require('./webpack.base.config.js');
 
-const CLeanWebpackPlugin=require('clean-webpack-plugin');
+// const CLeanWebpackPlugin=require('clean-webpack-plugin');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -21,14 +21,14 @@ module.exports=Merge(BaseWebpackConfig,{
     mode:"production",
     entry:path.resolve(__dirname,'../src'),
     output:{
-        filename:"[name].min.js",
+        filename:"emoji_jQuery.min.js",
         path: path.resolve(__dirname,'../dist')
     },
     plugins:[
-        new CLeanWebpackPlugin(path.resolve(__dirname,'../dist'),{
-            root:path.resolve(__dirname,'../'),
-            verbose:true
-        }),
+        // new CLeanWebpackPlugin(path.resolve(__dirname,'../dist'),{
+        //     root:path.resolve(__dirname,'../'),
+        //     verbose:true
+        // }),
         new UglifyJsPlugin({
             parallel:4,
             uglifyOptions: {
