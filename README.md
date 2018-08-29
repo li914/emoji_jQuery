@@ -2,6 +2,8 @@
 
 项目示意图：![示意图](https://github.com/li914/emoji_jQuery/blob/master/emoji_shiyitu.PNG)
 
+在线演示:[demo](https://li914.github.io/emoji_jQuery/)
+
 
 #### 1.基本介绍
 >本着学习的态度，本项目所有的材料来源于网络。如果有侵权，请联系删除。
