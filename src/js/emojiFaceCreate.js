@@ -50,7 +50,6 @@ module.exports=function (emojis,emojiMaps,length) {
             }
             if (Object.keys(arr).length===parseInt(index)){
                 var tmp=length-count;
-                console.log(tmp);
                 for (var i=0;i<tmp-1;i++){
                     emojiChild+='<li data-code="'+code+'"><img src="#" width="25" height="25" style="visibility: hidden;"></li>';
                 }

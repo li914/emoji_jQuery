@@ -53,7 +53,7 @@ module.exports=Merge(BaseWebpackConfig,{
         // contentBase:path.resolve(__dirname,'../dist/index.html'),
         contentBase:'./',
         host:'localhost',
-        port:8000,
+        port:8080,
         open:true,
         hot:true,
         inline:true,

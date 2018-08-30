@@ -58,11 +58,11 @@ module.exports=function (obj,emojiBtn,position) {
                     dTop=top-oHeigth-3;
                     dLeft=left;
                     break;
-                case 'LEFTBOTTOM':
+                case 'RIGTHBOTTOM':
                     dTop=top+btnHeigth+3;
                     dLeft=left;
                     break;
-                case 'RIGTHBOTTOM':
+                case 'LEFTBOTTOM':
                     dTop=top+btnHeigth+3;
                     dLeft=left-oWidth+btnWidth;
                     break;

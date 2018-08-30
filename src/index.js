@@ -20,7 +20,7 @@
                 },
                 emojiInput: 'input',
                 emojiBtn: '.emojiBtn',
-                position: 'RIGTHBOTTOM',
+                position: 'LEFTBOTTOM',
                 length: 7,
                 emojis: {
                     qq: {
@@ -117,13 +117,15 @@
              * 点击表情空白处隐藏表情框
              * */
             $(document).on('click', function (e) {
-                console.log($(e.target).parent().parent().attr('class'));
-                if ($(e.target).parent().parent().attr('class')=='emoji_tabar') {
-                    e.stopPropagation();
-                    return;
+                if (!isShowEmoji){
+                    // console.log($(e.target).parent().parent().attr('class'));
+                    if ($(e.target).parent().parent().attr('class')=='emoji_tabar') {
+                        e.stopPropagation();
+                        return;
+                    }
+                    isShowEmoji=true;
+                    container.hide('slow');
                 }
-                isShowEmoji=true;
-                container.hide('slow');
             });
 
 
