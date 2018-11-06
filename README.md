@@ -16,7 +16,7 @@
 
 #### 2.使用方法
 
-下载：[emoji_jQuery.min.js](https://github.com/li914/emoji_jQuery/blob/master/dist/emoji_jQuery.min.js),然后在jQuery后引入使用。
+下载：[emoji_jQuery.min.js](https://github.com/li914/emoji_jQuery/releases/download/1.0.1/emoji_jQuery.min.js),然后在jQuery后引入使用。
 
 * HTML代码
 ```html
