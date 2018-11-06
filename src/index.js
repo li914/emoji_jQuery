@@ -9,7 +9,6 @@
     const emojiPositions = require('./js/emojiPositions');
     $.extend({
         Lemoji: function (options) {
-            // console.log(options);
             if (!isValid(options)) {
                 return this;
             }
@@ -87,8 +86,6 @@
                 if ($(window).width()<dLeft) {
                     dLeft=$(window).width();
                 }
-                console.log($(window).width()<dLeft)
-                console.log('dleft:',dLeft)
                 var index = $(this).attr('data-index');
                 var left = -dLeft * parseInt(index);
                 left = left + 'px';

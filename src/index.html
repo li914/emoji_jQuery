@@ -8,71 +8,92 @@
     <title>基于jQuery的表情插件Emoji</title>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <style type="text/css">
-        body{
+        body {
             background-color: aquamarine;
         }
-        #test{
+
+        #test {
             width: 360px;
             height: 50px;
             margin: 0 auto;
         }
-        #div-emoji{
+
+        #div-emoji {
             width: 420px;
             margin: 0 auto;
             padding-top: 120px;
             margin-top: 50px;
+        }
+
+        #div-emoji input:nth-child(1) {
+            width: 100%;
+        }
+
+        #div-emoji button {
+            float: right;
+            margin-left: 3px;
+            color: white;
+            background-color: blue;
+            padding: 5px;
+            height: 30px;
         }
     </style>
 </head>
 <body>
 <div id="test"></div>
 <div id="div-emoji">
-    <p><input id="input" type="text"><input id="btn" type="button" value="emojiBtn"></p>
+    <p>
+        <input id="input" type="text">
+    </p>
+    <p>
+        <button id="send">发送</button>
+        <button id="btn">emojiBtn</button>
+    </p>
 </div>
 <script>
 
     $.Lemoji({
-        emojiInput:'#input',
-        emojiBtn:'#btn',
-        position:'LEFTBOTTOM',
-        length:8,
-        emojis:{
-            qq:{
-                path:'static/images/qq/',
-                code:':',
-                name:'QQ表情'
+        emojiInput: '#input',
+        emojiBtn: '#btn',
+        position: 'LEFTBOTTOM',
+        length: 8,
+        emojis: {
+            qq: {
+                path: 'static/images/qq/',
+                code: ':',
+                name: 'QQ表情'
             },
-            tieba:{
+            tieba: {
                 path: 'static/images/tieba',
-                code:';',
-                name:"贴吧表情"
+                code: ';',
+                name: "贴吧表情"
             },
-            emoji:{
-                path:'static/images/emoji',
-                code:',',
-                name:'Emoji表情'
+            emoji: {
+                path: 'static/images/emoji',
+                code: ',',
+                name: 'Emoji表情'
             }
         }
-        });
-    $('#btn').click(function () {
-        var content=$('#input').val();
-        content=$.emojiParse({
-            content:content,
+    });
+    $('#send').click(function () {
+        var content = $('#input').val();
+        content = $.emojiParse({
+            content: content,
             emojis: [
                 {
-                    type:'qq',
+                    type: 'qq',
                     path: 'static/images/qq/',
                     code: ':'
                 },
                 {
-                    path:'static/images/tieba/',
-                    code:';',
+                    path: 'static/images/tieba/',
+                    code: ';',
                     type: 'tieba'
                 },
                 {
-                    path:'static/images/emoji/',
-                    code:',',
-                    type:'emoji'
+                    path: 'static/images/emoji/',
+                    code: ',',
+                    type: 'emoji'
                 }
             ]
         });

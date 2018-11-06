@@ -21,7 +21,15 @@
 * HTML代码
 ```html
 <div id="test"></div>
-<div id="div-emoji"><p><input id="input" type="text"><input id="btn" type="button" value="emojiBtn"></p></div>
+<div id="div-emoji">
+    <p>
+        <input id="input" type="text">
+    </p>
+    <p>
+        <button id="send">发送</button>
+        <button id="btn">emojiBtn</button>
+    </p>
+</div>
 ```
 
 * 设置表情
@@ -51,7 +59,7 @@ $.Lemoji({
 
 
 ```javascript
-$('#btn').click(function () {
+$('#send').click(function () {
     var content = $('#input').val();
     content = $.emojiParse({
         content: content,

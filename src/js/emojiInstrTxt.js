@@ -2,7 +2,6 @@
  * 向输入框插入表情字符
  * */
 module.exports=function (obj,str) {
-    console.log(obj[0],str);
     obj=obj[0];
     obj.focus();
     if (document.selection){
